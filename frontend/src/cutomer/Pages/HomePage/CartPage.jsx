@@ -1,5 +1,6 @@
 // import React from 'react';
 import { useCart } from './cart';
+
 // import { useNavigate } from 'react-router-dom';
 import { Container } from "reactstrap";
 import toast, { Toaster } from "react-hot-toast";
@@ -9,12 +10,15 @@ const CartPage = () => {
     // const navigate = useNavigate();
 
     const backgroundImageStyle = {
-    background: '#cbf7e0',
-    background: '-webkit-linear-gradient(62deg, #cbf7e0 0%, #c0a197 100%)',
-    background: 'linear-gradient(62deg, #cbf7e0 0%, #c0a197 100%)',
-    height: '100vh',
-    padding: '0',
+        background: [
+          '#cbf7e0',  // Fallback for browsers that don't support gradients
+          '-webkit-linear-gradient(62deg, #cbf7e0 0%, #c0a197 100%)',  // Fallback for older versions of Chrome/Safari
+          'linear-gradient(62deg, #cbf7e0 0%, #c0a197 100%)'  // Standard gradient
+        ],
+        height: '100vh',
+        padding: '0',
     };
+    
     
     
     
